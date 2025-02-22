@@ -86,17 +86,17 @@
 <script>
   // Pre-defined ingredient percentages
   const ingredientPercentages = {
-    water: 0.784 // 78.4%
-    edta2a: 0.002 // 0.2%
-    causticsoda: 0.0065 // 0.65%
-    labsa: 0.05 // 5%
-    sles: 0.08  // 8%
-    cab: 0.04 // 4%
-    np10: 0.012 // 1.2%
-    cdea: 0.015 // 1.5%
-    fragrance: 0.0025 // 0.25%
-    mit: 0.001  // 0.10%
-    nacl: 0.007 // 0.70%
+    water: 0.784,       // 78.4%
+    edta2a: 0.002,      // 0.2%
+    causticSoda: 0.0065,// 0.65%
+    labsa: 0.05,        // 5%
+    sles70: 0.08,       // 8%
+    cab: 0.04,          // 4%
+    np10: 0.012,        // 1.2%
+    cdea: 0.015,        // 1.5%
+    fragrance: 0.0025,  // 0.25%
+    mit: 0.001,         // 0.10%
+    nacl: 0.007         // 0.70%
   };
 
   function calculateDetergent() {
@@ -112,28 +112,29 @@
     // Calculate ingredient amounts
     const water = (totalVolume * ingredientPercentages.water).toFixed(2);
     const edta2a = (totalVolume * ingredientPercentages.edta2a).toFixed(2);
-    const causticsoda = (totalVolume * ingredientPercentages.causticsoda).toFixed(2);
+    const causticSoda = (totalVolume * ingredientPercentages.causticSoda).toFixed(2);
     const labsa = (totalVolume * ingredientPercentages.labsa).toFixed(2);
-    const sles = (totalVolume * ingredientPercentages.sles).toFixed(2);
+    const sles70 = (totalVolume * ingredientPercentages.sles70).toFixed(2);
     const cab = (totalVolume * ingredientPercentages.cab).toFixed(2);
     const np10 = (totalVolume * ingredientPercentages.np10).toFixed(2);
     const cdea = (totalVolume * ingredientPercentages.cdea).toFixed(2);
     const fragrance = (totalVolume * ingredientPercentages.fragrance).toFixed(2);
     const mit = (totalVolume * ingredientPercentages.mit).toFixed(2);
     const nacl = (totalVolume * ingredientPercentages.nacl).toFixed(2);
+
     // Display results
     document.getElementById('result').innerHTML = `
       <p><strong>Water:</strong> ${water} ml</p>
-      <p><strong>EDTA 2 Na:</strong> ${edta2a} g</p>
-      <p><strong>Caustic Soda:</strong> ${causticsoda} g</p>
-      <p><strong>LABSA:</strong> ${labsa} g</p>
-      <p><strong>SLES:</strong> ${sles} g</p>
+      <p><strong>EDTA-2A:</strong> ${edta2a} ml</p>
+      <p><strong>Caustic Soda:</strong> ${causticSoda} ml</p>
+      <p><strong>LABSA:</strong> ${labsa} ml</p>
+      <p><strong>SLES 70%:</strong> ${sles70} ml</p>
       <p><strong>CAB:</strong> ${cab} ml</p>
       <p><strong>NP-10:</strong> ${np10} ml</p>
-      <p><strong>CDEA:</strong> ${cdea} g</p>
+      <p><strong>CDEA:</strong> ${cdea} ml</p>
       <p><strong>Fragrance:</strong> ${fragrance} ml</p>
-      <p><strong>MITr:</strong> ${mit} g</p>
-      <p><strong>NaCL:</strong> ${nacl} g</p>
+      <p><strong>MIT:</strong> ${mit} ml</p>
+      <p><strong>NaCl:</strong> ${nacl} ml</p>
     `;
   }
 </script>
